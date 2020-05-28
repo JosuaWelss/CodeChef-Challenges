@@ -40,14 +40,14 @@
 #             car_max_speed = car_in_front_speed                      ----!!!! variable changes but not the list entry
 #     print(number_of_cars_passing_with_max_speed)
 
-    number_of_test = int(input())
-    for i in range(number_of_test):
-        number_of_cars = int(input())
-        inputs = list(map(int, input().split()))
-        number_of_cars_passing_with_max_speed = 1
-        for j in range(1, number_of_cars):
-            if inputs[j] <= inputs[j - 1]:
-                number_of_cars_passing_with_max_speed += 1
-            else:
-                inputs[j] = inputs[j - 1]
-        print(number_of_cars_passing_with_max_speed)
+number_of_test = int(input())
+for i in range(number_of_test):
+    number_of_cars = int(input())
+    inputs = list(map(int, input().split()))
+    number_of_cars_passing_with_max_speed = 1
+    for j in range(1, number_of_cars):
+        if inputs[j] <= inputs[j - 1]:
+            number_of_cars_passing_with_max_speed += 1
+        else:
+            inputs[j] = inputs[j - 1]
+    print(number_of_cars_passing_with_max_speed)
